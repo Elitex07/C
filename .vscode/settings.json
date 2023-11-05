@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.compilerPath": "x:/mys64/ucrt64/bin/g++.exe",
+    "files.associations": {
+        "*.ejs": "html",
+        "conio.h": "c"
+    }
+}
