@@ -3,7 +3,7 @@
 
 int main(){
     int x, y, a, s, m, d;
-    // clrsrc();
+    clrscr();
     printf("Enter a Number: ");
     scanf("%d", &x);
     printf("Enter another Number: ");

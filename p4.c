@@ -4,7 +4,7 @@
 
 int main(){
     float principal, rate, time, times, simpleInterest, compoundInterest;
-    // clrsrc();
+    clrscr();
 
     printf("Enter principal amount: ");
     scanf("%f", &principal);

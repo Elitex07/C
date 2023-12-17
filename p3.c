@@ -4,7 +4,7 @@
 int main(){
     int s1, s2, s3, s4, s5, t;
     float p;
-    // clrsrc();
+    clrscr();
     printf("Enter marks of all 5 subjects: ");
     scanf("%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5);
 
