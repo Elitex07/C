@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "x:\\Side Projects\\C\\Executables\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "x:\\mys64\\ucrt64\\bin"
