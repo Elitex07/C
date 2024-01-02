@@ -15,7 +15,7 @@ void main(){
         t = n;
         for(;t != 0;){
             r = t % 10;
-            while(i > 0){
+            while(i > 1){
                 r *= r;
                 i--;
             }
