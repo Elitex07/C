@@ -17,7 +17,7 @@ void main(){
             r = t % 10;
             while(i > 0){
                 r *= r;
-i--;
+                i--;
             }
             s = s + r;
             t /= 10;
