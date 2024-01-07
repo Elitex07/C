@@ -2,27 +2,23 @@
 #include <conio.h>
 
 void main(){
-    int a[100], b[100], c[100], n, i;
+    int a[100], n, i, min, max;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
-    printf("Enter the elements of the 1st array: ");
-    
-    a[n], b[n], c[n];
-    for(i=0;i<n;i++){
+
+    a[n];
+    printf("Enter the elements of the array: ");
+    for(i=0; i<n; i++){
         scanf("%d", &a[i]);
     }
 
-    printf("Enter the elements of the 2nd array: ");
-    for(i=0;i<n;i++){
-        scanf("%d", &b[i]);
+    min = a[0];
+    max= a[0];
+    for(i=1;i<n;i++){
+        if(min > a[i]) min = a[i];
+        if (max < a[i]) max = a[i];
     }
 
-    for(i=0;i<n;i++){
-        c[i] = a[i] + b[i];
-    }
-
-    printf("Array of sum of corresponding elements is: ");
-    for(i=0;i<n;i++){
-        printf("%d ", c[i]);
-    }
+    printf("Maximum element is %d", max);
+    printf("\nMinimum element is %d", min);
 }

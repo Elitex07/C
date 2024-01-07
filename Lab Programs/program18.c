@@ -2,16 +2,17 @@
 #include <conio.h>
 
 void main(){
-    int n, a, b, c, i;
-    printf("Enter the number of elements: ");
+    int n, i, r;
+    printf("Enter a number: ");
     scanf("%d", &n);
-    a = 0;
-    b = 1;
-    printf("%d\n%d\n", a, b);
-    for(i = 1; i <= n-2; i++){
-        c = a + b;
-        printf("%d\n", c);
-        a = b;
-        b = c;
+    r = 0;
+    for (i = 2; i < n; i++)
+    {
+        if(n % i == 0) {
+            r = 1;
+            break;
+        }
     }
+    if(r == 1) printf("Given number is not a prime number.");
+    else printf("Given number is a prime number.");
 }

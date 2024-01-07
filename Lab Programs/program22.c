@@ -2,29 +2,34 @@
 #include <conio.h>
 
 void main(){
-    int n, s, r, t, i;
-    int t2;
-    for(n=1;n<=100;n++){
-        s = 0;
-        t = n;
-        i = 0;
-        for(;t != 0;){
-            i++;
-            t /= 10;
-        }
-        t = n;
-        t2 = i;
-        for(;t != 0;){
-            r = t % 10;
-            i = t2;
-            while(i > 1){
-                r *= r;
-                i--;
+    int b, n, i, r, p, c;
+    printf("Enter a binary number: ");
+    scanf("%d", &b);
+    r = 0;
+    for(n = 0; b != 0; n++){
+        i = b % 10;
+        if(i == 1){
+            p = 1;
+            c = n;
+            while (c > 0)
+            {
+                p = p*2;
+                c--;
             }
-            s = s + r;
-            t /= 10;
+            
+            r = r + p;
         }
-        if(s == n) printf("%d\n", s);
+        b /= 10;
     }
-    
+
+    printf("Decimal Number: %d\n", r);
+    printf("Enter a Decimal Number: ");
+    scanf("%d", &b);
+    r = 0;
+    for(n = 1; b != 0; n *= 10){
+        i = b % 2;
+        r = r + i*n;
+        b /= 2;
+    }
+    printf("Binary  Number: %d", r);
 }

@@ -2,17 +2,14 @@
 #include <conio.h>
 
 void main(){
-    int n, i, r;
+    int n, s, r;
     printf("Enter a number: ");
     scanf("%d", &n);
-    r = 0;
-    for (i = 2; i < n; i++)
-    {
-        if(n % i == 0) {
-            r = 1;
-            break;
-        }
+    s = 0;
+    for(;n != 0;){
+        r = n % 10;
+        s = s + r;
+        n /= 10;
     }
-    if(r == 1) printf("Given number is not a prime number.");
-    else printf("Given number is a prime number.");
+    printf("Sum of digits is %d", s);
 }

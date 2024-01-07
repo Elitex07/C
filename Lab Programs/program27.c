@@ -2,27 +2,27 @@
 #include <conio.h>
 
 void main(){
-    int ar[100], n, i, ele, r;
+    int ar[25], i, j, n, temp;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    ar[n];
-    printf("Enter the elements of the array: ");
+    printf("Enter elements of the array: ");
     for(i=0; i<n; i++){
         scanf("%d", &ar[i]);
     }
 
-    printf("Enter the element to search: ");
-    scanf("%d", &ele);
-
-    r = -1;
-    for(i=0;i<n;i++){
-        if(ar[i] == ele){ 
-            r = i;
-            break;
+    for(i=0;i<n-1;i++){
+        for(j=0;j<n-1-i;j++){
+            if(ar[j] > ar[j+1]){
+                temp = ar[j+1];
+                ar[j + 1] = ar[j];
+                ar[j] = temp;
+            }
         }
     }
 
-    if(r == -1) printf("Element is not present in the array.");
-    else printf("Element is present at index %d in the array", r);
+    printf("Sorted array is given by: ");
+    for(i = 0; i<n; i++){
+        printf("%d ", ar[i]);
+    }
 }

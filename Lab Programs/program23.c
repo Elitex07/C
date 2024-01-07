@@ -2,34 +2,20 @@
 #include <conio.h>
 
 void main(){
-    int b, n, i, r, p, c;
-    printf("Enter a binary number: ");
-    scanf("%d", &b);
-    r = 0;
-    for(n = 0; b != 0; n++){
-        i = b % 10;
-        if(i == 1){
-            p = 1;
-            c = n;
-            while (c > 0)
-            {
-                p = p*2;
-                c--;
-            }
-            
-            r = r + p;
-        }
-        b /= 10;
+    int ar[100], s, i, n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    ar[n];
+    printf("Enter the elements of the array: ");
+    for(i=0; i<n; i++){
+        scanf("%d", &ar[i]);
     }
 
-    printf("Decimal Number: %d\n", r);
-    printf("Enter a Decimal Number: ");
-    scanf("%d", &b);
-    r = 0;
-    for(n = 1; b != 0; n *= 10){
-        i = b % 2;
-        r = r + i*n;
-        b /= 2;
+    s = 0;
+    for(i=0; i<n;i++){
+        s = s + ar[i];
     }
-    printf("Binary  Number: %d", r);
+
+    printf("Sum of all elements in the array is %d", s);
 }

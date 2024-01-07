@@ -2,23 +2,27 @@
 #include <conio.h>
 
 void main(){
-    int a[100], n, i, min, max;
+    int ar[100], n, i, ele, r;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    a[n];
+    ar[n];
     printf("Enter the elements of the array: ");
     for(i=0; i<n; i++){
-        scanf("%d", &a[i]);
+        scanf("%d", &ar[i]);
     }
 
-    min = a[0];
-    max= a[0];
-    for(i=1;i<n;i++){
-        if(min > a[i]) min = a[i];
-        if (max < a[i]) max = a[i];
+    printf("Enter the element to search: ");
+    scanf("%d", &ele);
+
+    r = -1;
+    for(i=0;i<n;i++){
+        if(ar[i] == ele){ 
+            r = i;
+            break;
+        }
     }
 
-    printf("Maximum element is %d", max);
-    printf("\nMinimum element is %d", min);
+    if(r == -1) printf("Element is not present in the array.");
+    else printf("Element is present at index %d in the array", r);
 }
